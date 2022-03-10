@@ -1,0 +1,41 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background: $blue;
+    color: $white;
+    height: rem(54);
+    z-index: $layer-header;
+    @include mq('md') {
+        height: rem(65);
+    }
+    &.is-active {
+        background: $main;
+        color: $blue;
+    }
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    @include mq('md') {
+        justify-content: space-between;
+    }
+}
+
+.header__logo {
+    height: inherit;
+}
+
+.header__title {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    font-size: rem(24);
+    font-family: $second-font-family;
+    padding-top: rem(4);
+}
+
+.header__nav {
+    height: inherit;
+}

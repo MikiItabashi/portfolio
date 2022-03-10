@@ -1,0 +1,22 @@
+.title {
+    text-align: center;
+}
+
+.title__primary {
+    color: $red;
+    font-size: rem(48);
+    font-weight: $medium;
+    font-family: $second-font-family;
+    text-shadow: rem(0) rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    @include mq('md') {
+        font-size: rem(65);
+    }
+}
+
+.title__secondary {
+    font-size: rem(14);
+    transform: translateY(rem(-16));
+    @include mq('md') {
+        font-size: rem(16);
+    }
+}

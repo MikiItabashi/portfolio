@@ -1,0 +1,94 @@
+.top {
+    background: $main;
+    padding-top: rem(54);
+    @include mq('sm') {
+        padding-top: rem(65);
+    }
+}
+
+.top__wrapper {
+    @include mq('sm') {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+}
+
+.top__img {
+    padding: 0 rem(14);
+    img {
+        width: 100%;
+        box-shadow: rem(14) rem(14) rem(20) rgba(101, 101, 101, 0.28);
+        @include mq('sm') {
+            width: rem(429);
+            height: rem(471);
+            object-fit: cover;
+        }
+    }
+}
+
+.top__lead {
+    margin-top: rem(-27);
+    position: relative;
+    @include mq('md') {
+        margin: auto 0;
+    }
+}
+
+.top__text {
+    text-align: center;
+    color: $blue;
+    background: $white;
+    box-shadow: rem(0) rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    @include mq('sm') {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+.top__text--hello {
+    font-family: $second-font-family;
+    font-size: rem(32);
+    line-height: rem(52.26);
+    font-weight: $medium;
+    position: absolute;
+    left: rem(-19);
+    top: rem(-57);
+    transform: rotate(-12deg);
+    padding: rem(5) rem(19);
+    @include mq('sm') {
+        position: relative;
+        transform: none;
+        top: 0;
+        left: 0;
+        font-size: rem(64);
+        margin: rem(37) 0 0;
+        padding: rem(16) rem(8) rem(3);
+        display: inline-block;
+        max-width: rem(198);
+    }
+}
+
+.top__text--name {
+    font-family: $second-font-family;
+    font-size: rem(32);
+    line-height: rem(52.26);
+    font-weight: $medium;
+    margin-bottom: rem(16);
+    padding: rem(5) rem(19);
+    @include mq('sm') {
+        font-size: rem(64);
+        margin: rem(16) 0;
+        padding: rem(16) rem(16) rem(10);
+    }
+}
+
+.top__text--profile {
+    font-size: rem(24);
+    line-height: rem(34.75);
+    margin-bottom: rem(14);
+    padding: rem(5) 0;
+    @include mq('sm') {
+        padding: rem(5) rem(23) rem(5);
+    }
+}

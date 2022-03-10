@@ -1,0 +1,60 @@
+@import "../setting/breakpoints";
+@import "../function/mediaquery";
+@import "../function/strip-unit";
+.section {
+    width: 100%;
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq("md") {
+        max-width: $inner + strip-unit($padding-pc) * 2;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
+.section--top {
+    padding: rem(51) $padding-sp rem(61);
+    @include mq('lg') {
+        padding: rem(105) rem(41) rem(103) rem(73);
+    }
+}
+
+.section--service {
+    padding: rem(57) $padding-sp rem(98);
+    @include mq('lg') {
+        padding: rem(117) $padding-pc rem(98);
+    }
+}
+
+.section--about {
+    padding: rem(122) $padding-sp rem(160);
+    @include mq('lg') {
+        padding: rem(180) $padding-pc rem(291);
+    }
+}
+
+.section--works {
+    padding: rem(103) rem(30) rem(117);
+    @include mq('lg') {
+        max-width: $inner-works + strip-unit($padding-pc) * 2;
+        padding: rem(160) $padding-pc rem(238);
+    }
+}
+
+.section--contact {
+    padding: rem(103) $padding-sp rem(158);
+    @include mq('lg') {
+        max-width: $inner-contact + strip-unit($padding-pc) * 2;
+        padding: rem(159) $padding-pc rem(248);
+    }
+}
+
+.section--not-found {
+    padding: rem(103) $padding-sp rem(158);
+    @include mq('lg') {
+        max-width: $inner-contact + strip-unit($padding-pc) * 2;
+        padding: rem(159) $padding-pc rem(248);
+    }
+}

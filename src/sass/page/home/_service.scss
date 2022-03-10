@@ -1,0 +1,90 @@
+.service {
+    background: $white;
+}
+
+.service__wrapper {}
+
+.service__title {}
+
+.service__img {
+    text-align: center;
+    margin-top: rem(13);
+    @include mq('lg') {
+        margin-top: rem(24);
+    }
+    img {}
+}
+
+.service__body {}
+
+.service__items {
+    margin-top: rem(101);
+    @include mq('lg') {
+        margin-top: rem(73);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: rem(100);
+            height: rem(216);
+        }
+        &::before {
+            background: url(../images/common/service_left.svg) no-repeat right / contain;
+            top: 50%;
+            left: rem(20);
+            transform: translateY(-50%);
+            @include mq('tab') {
+                left: rem(73);
+            }
+        }
+        &::after {
+            background: url(../images/common/service_right.svg) no-repeat left / contain;
+            top: 50%;
+            right: rem(20);
+            transform: translateY(-50%);
+            @include mq('tab') {
+                right: rem(73);
+            }
+        }
+    }
+}
+
+.service__item {
+    max-width: rem(500);
+    margin: 0 auto;
+    &:not(:last-child) {
+        margin-bottom: rem(93);
+    }
+    @include mq('lg') {
+        text-align: center;
+        width: rem(307);
+        margin: 0;
+        &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: rem(131);
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                width: rem(100);
+                height: rem(213);
+                background: url(../images/common/service_middle.svg) no-repeat right / contain;
+                top: 50%;
+                right: rem(-110);
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+.service__btn {
+    text-align: center;
+    letter-spacing: -.06em;
+    margin-top: rem(42);
+    @include mq('lg') {
+        margin-top: rem(113);
+    }
+}

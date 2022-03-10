@@ -1,0 +1,93 @@
+.btn {
+    display: inline-block;
+    text-align: left;
+    background: $blue;
+    color: $white;
+    padding: rem(16) 0 rem(16) rem(61);
+    border-radius: rem(5);
+    box-shadow: rem(4) rem(4) rem(4) rgba(134, 134, 134, 0.25);
+    position: relative;
+    width: rem(235);
+    font-size: rem(18);
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background: $white;
+    }
+    &::before {
+        width: rem(33);
+        height: rem(1);
+        top: rem(35);
+        right: rem(35);
+    }
+    &::after {
+        width: rem(15);
+        height: rem(1);
+        top: rem(31);
+        right: rem(33);
+        transform: rotate(37deg);
+    }
+    &:hover {
+        background: #829FB0;
+        transition: .3s;
+    }
+}
+
+.btn--white,
+.btn--main {
+    color: $black;
+    width: rem(140);
+    padding: rem(9) rem(10) rem(8) 0;
+    text-align: center;
+    font-size: rem(16);
+    &::before,
+    &::after {
+        background: $black;
+    }
+    &::before {
+        width: rem(26);
+        height: rem(1);
+        top: rem(29);
+        right: rem(11);
+    }
+    &::after {
+        width: rem(12);
+        height: rem(1);
+        top: rem(24);
+        right: rem(11);
+        transform: rotate(47deg);
+    }
+    &:hover {
+        background: #CBCBCB;
+    }
+}
+
+.btn--white {
+    background: $white;
+}
+
+.btn--main {
+    background: #F3F2E9;
+}
+
+.btn--small {
+    width: rem(173);
+    @include mq('lg') {
+        font-size: rem(24);
+        width: rem(193);
+        padding-left: rem(70);
+        &::before {
+            top: rem(39);
+            right: rem(25);
+        }
+        &::after {
+            top: rem(34);
+            right: rem(25);
+        }
+    }
+}
+
+.btn--big {
+    width: rem(250);
+}

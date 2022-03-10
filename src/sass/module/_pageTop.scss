@@ -1,0 +1,10 @@
+.pageTop {
+    position: fixed;
+    right: rem(24);
+    bottom: rem(54);
+    z-index:$layer-header;
+    @include mq('md') {
+        right: rem(50);
+        bottom: rem(63);
+    }
+}

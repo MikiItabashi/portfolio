@@ -1,0 +1,58 @@
+.card {
+    position: relative;
+}
+
+.card__title {
+    position: absolute;
+    top: rem(-37);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: rem(24);
+    line-height: rem(34.75);
+    font-weight: $medium;
+    background: $main;
+    padding: rem(12) rem(9);
+    white-space: nowrap;
+    @include mq('lg') {
+        position: relative;
+        top: 0;
+        font-size: rem(26);
+        background: none;
+    }
+}
+
+.card__body {
+    padding: rem(48) rem(16) rem(13);
+    box-shadow: rem(0) rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    @include mq('lg') {
+        padding: rem(7) rem(22) rem(18);
+        box-shadow: none;
+        height: 100%;
+        position: relative;
+    }
+}
+
+.card__text {
+    letter-spacing: -.06em;
+    line-height: 1.4;
+    @include mq('lg') {
+        line-height: rem(22);
+        text-align: left;
+        letter-spacing: 0;
+    }
+}
+
+.card__price {
+    font-size: rem(24);
+    text-align: center;
+    margin-top: rem(16);
+    @include mq('lg') {
+        font-size: rem(26);
+        margin-top: rem(4);
+        position: absolute;
+        bottom: rem(27);
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+}

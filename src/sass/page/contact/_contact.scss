@@ -1,0 +1,23 @@
+.contact {
+    background: $main;
+}
+
+.contact__wrapper {}
+
+.contact__title {}
+
+.contact__lead {
+    margin-top: rem(10);
+    margin-left: rem(12);
+    @include mq('md') {
+        margin-top: rem(32);
+        margin-left: 0;
+    }
+}
+
+.contact__form {
+    margin-top: rem(38);
+    @include mq('md') {
+        margin-top: rem(49);
+    }
+}

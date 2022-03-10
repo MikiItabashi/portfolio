@@ -1,0 +1,12 @@
+.not-found{
+    height:100vh;
+    background:$main;
+    text-align:center;
+}
+
+.not-found__text{
+    font-size:rem(24);
+}
+.not-found__btn{
+margin-top:rem(200);
+}

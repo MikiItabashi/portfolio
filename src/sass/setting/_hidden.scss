@@ -1,0 +1,29 @@
+//デスクトップのみ表示
+.u-desktop {
+    display: none;
+    @include mq("md") {
+        display: block;
+    }
+}
+
+//モバイルのみ表示
+.u-mobile {
+    @include mq("md") {
+        display: none;
+    }
+}
+
+//lg以上のみ表示
+.u-big {
+    display: none;
+    @include mq("lg") {
+        display: block;
+    }
+}
+
+//lg以下のみ表示
+.u-small {
+    @include mq("lg") {
+        display: none;
+    }
+}

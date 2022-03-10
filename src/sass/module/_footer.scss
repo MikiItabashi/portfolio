@@ -1,0 +1,21 @@
+.footer {}
+
+.footer__nav {
+    background: transparent;
+    position: absolute;
+    right: 0;
+    transform: translateY(rem(-53));
+}
+
+.footer__wrapper {
+    text-align: center;
+    background: $blue;
+    color: $white;
+    height: rem(40);
+}
+
+.footer__copy {
+    font-size: rem(16);
+    font-family: $third-font-family;
+    line-height: rem(40);
+}

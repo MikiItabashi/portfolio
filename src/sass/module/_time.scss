@@ -1,0 +1,49 @@
+.time {
+    padding: rem(6) 0 0 rem(32);
+    @include mq('lg') {
+        padding: rem(19) 0;
+    }
+}
+
+.time__items {}
+
+.time__item {
+    display: flex;
+    justify-content: start;
+    &:not(:last-child) {
+        margin-bottom: rem(9);
+    }
+}
+
+.time__list {
+    margin-right: rem(40);
+    font-size: rem(16);
+    line-height: rem(23.17);
+    position: relative;
+    &::before {
+        background: url(../images/common/Vector.svg);
+        position: absolute;
+        content: "";
+        width: rem(12);
+        height: rem(12);
+        right: rem(-26);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @include mq('lg') {
+        font-size: rem(18);
+    }
+}
+
+.time__description {
+    font-size: rem(18);
+    line-height: rem(26.06);
+}
+
+.time__text {
+    margin-top: rem(18);
+    @include mq('lg') {
+        margin-top: rem(12);
+        max-width: rem(306);
+    }
+}

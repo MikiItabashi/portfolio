@@ -1,0 +1,60 @@
+.more {
+    font-family: $third-font-family;
+    color: $red;
+    text-align: center;
+    font-size: rem(18);
+    line-height: rem(21.09);
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    padding: rem(10);
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: rem(22);
+        height: rem(3);
+        background: $red;
+        bottom: rem(-2);
+        transition: .3s;
+    }
+    &::before {
+        transform: rotate(30deg);
+        left: 19%;
+    }
+    &::after {
+        transform: rotate(-30deg);
+        right: 19%;
+    }
+    &:hover {
+        cursor: pointer;
+        &::before,
+        &::after {
+            width: rem(40);
+            height: rem(3);
+        }
+        &::before {
+            left: rem(-6);
+        }
+        &::after {
+            right: rem(-6);
+        }
+    }
+    &.is-open {
+        display: none;
+    }
+    @include mq('md') {
+        font-size: rem(24);
+        &::before,
+        &::after {
+            width: rem(25);
+            bottom: rem(-16);
+        }
+        &:hover {
+            &::before,
+            &::after {
+                width: rem(48);
+            }
+        }
+    }
+}

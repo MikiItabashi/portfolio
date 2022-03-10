@@ -1,0 +1,25 @@
+.header-nav {}
+
+.header-nav__items {
+    height: inherit;
+    display: flex;
+    justify-content: end;
+}
+
+.header-nav__item {
+    height: inherit;
+    &:not(:first-child) {
+        margin-left: rem(65);
+    }
+}
+
+.header-nav__link {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    font-size: rem(18);
+    font-weight: $regular;
+    &:hover {
+        color: #CBCBCB;
+    }
+}
